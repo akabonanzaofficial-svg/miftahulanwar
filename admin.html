@@ -226,7 +226,7 @@
             <div id="tab-produk" class="cms-tab-content hidden animate-[fadeIn_0.3s_ease-out]">
                 <div class="flex justify-between items-center mb-6">
                     <div><h2 class="text-2xl font-bold text-slate-800">Manajemen Produk</h2></div>
-                    <button onclick="document.getElementById('form-produk-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Produk</button>
+                    <button onclick="resetProdukForm(); document.getElementById('form-produk-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Produk</button>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
                     <table class="w-full text-sm text-left text-slate-500">
@@ -242,7 +242,7 @@
             <div id="tab-berita" class="cms-tab-content hidden animate-[fadeIn_0.3s_ease-out]">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold text-slate-800">Manajemen Berita</h2>
-                    <button onclick="document.getElementById('form-berita-modal').classList.remove('hidden'); resetBeritaForm();" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Berita</button>
+                    <button onclick="resetBeritaForm(); document.getElementById('form-berita-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Berita</button>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
                     <table class="w-full text-sm text-left text-slate-500">
@@ -255,11 +255,11 @@
             </div>
         </div>
 
-        <!-- MODAL TAMBAH PRODUK -->
+        <!-- MODAL TAMBAH/EDIT PRODUK -->
         <div id="form-produk-modal" class="hidden absolute inset-0 z-[120] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl flex flex-col animate-[fadeInUp_0.3s_ease-out]">
                 <div class="p-6 border-b flex justify-between items-center bg-slate-50 rounded-t-3xl">
-                    <h3 class="text-xl font-bold text-slate-800"><i class="fa-solid fa-store text-brand-600 mr-2"></i> Tambah Produk Baru</h3>
+                    <h3 class="text-xl font-bold text-slate-800"><i class="fa-solid fa-store text-brand-600 mr-2"></i> <span id="modal-produk-title">Tambah Produk Baru</span></h3>
                 </div>
                 <div class="p-6 space-y-4">
                     <div><label class="block text-sm font-semibold mb-1">Nama Produk</label><input type="text" id="prod-nama" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
@@ -269,10 +269,12 @@
                     </div>
                     <div><label class="block text-sm font-semibold mb-1">URL Foto Produk</label><input type="url" id="prod-gambar" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                     <div><label class="block text-sm font-semibold mb-1">Deskripsi Singkat</label><textarea id="prod-desc" rows="3" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
+                    <!-- Hidden field untuk menyimpan ID produk yang di-edit -->
+                    <input type="hidden" id="edit-produk-index" value="">
                 </div>
                 <div class="p-6 border-t flex justify-end gap-3 bg-slate-50 rounded-b-3xl">
                     <button onclick="document.getElementById('form-produk-modal').classList.add('hidden')" class="px-6 py-2.5 border rounded-xl text-slate-600 font-bold hover:bg-white">Batal</button>
-                    <button onclick="addProduk()" class="px-6 py-2.5 bg-brand-900 text-white font-bold rounded-xl hover:bg-brand-700 shadow-lg"><i class="fa-solid fa-save mr-2"></i> Simpan Produk</button>
+                    <button onclick="saveProduk()" class="px-6 py-2.5 bg-brand-900 text-white font-bold rounded-xl hover:bg-brand-700 shadow-lg"><i class="fa-solid fa-save mr-2"></i> <span id="modal-produk-btn">Simpan Produk</span></button>
                 </div>
             </div>
         </div>
@@ -574,21 +576,41 @@
             await sendApiRequest("update_data", "Fasilitas", payload);
         }
 
-        // Tambah Produk
-        async function addProduk() {
+        // Reset form produk
+        function resetProdukForm() {
+            document.getElementById('prod-nama').value = '';
+            document.getElementById('prod-harga').value = '';
+            document.getElementById('prod-label').value = '';
+            document.getElementById('prod-gambar').value = '';
+            document.getElementById('prod-desc').value = '';
+            document.getElementById('edit-produk-index').value = '';
+            document.getElementById('modal-produk-title').textContent = 'Tambah Produk Baru';
+            document.getElementById('modal-produk-btn').textContent = 'Simpan Produk';
+        }
+
+        // Tambah / Edit Produk
+        async function saveProduk() {
             const prodNama = document.getElementById('prod-nama').value;
             if(!prodNama) return showToast("Nama produk wajib diisi!", "error");
 
-            if(!globalData.Produk) globalData.Produk = [];
-            
-            // Tambahkan ke memori lokal
-            globalData.Produk.push({
+            const editIndex = document.getElementById('edit-produk-index').value;
+            const payload = {
                 Nama: prodNama,
                 Harga: document.getElementById('prod-harga').value,
                 Label: document.getElementById('prod-label').value,
                 Gambar: document.getElementById('prod-gambar').value,
                 Deskripsi: document.getElementById('prod-desc').value
-            });
+            };
+
+            if(!globalData.Produk) globalData.Produk = [];
+
+            if(editIndex === '') {
+                // Tambah produk baru
+                globalData.Produk.push(payload);
+            } else {
+                // Edit produk
+                globalData.Produk[parseInt(editIndex)] = payload;
+            }
 
             // Kirim seluruh tabel produk ke Sheets
             const isSuccess = await sendApiRequest("update_data", "Produk", globalData.Produk);
@@ -596,12 +618,33 @@
                 document.getElementById('form-produk-modal').classList.add('hidden');
                 document.getElementById('dash-produk').textContent = globalData.Produk.length;
                 renderTables(); // Update UI tabel
-                // Clear form
-                document.getElementById('prod-nama').value = '';
-                document.getElementById('prod-harga').value = '';
-                document.getElementById('prod-label').value = '';
-                document.getElementById('prod-gambar').value = '';
-                document.getElementById('prod-desc').value = '';
+                resetProdukForm();
+            }
+        }
+
+        // Edit produk
+        function editProduk(index) {
+            const produk = globalData.Produk[index];
+            document.getElementById('prod-nama').value = produk.Nama || '';
+            document.getElementById('prod-harga').value = produk.Harga || '';
+            document.getElementById('prod-label').value = produk.Label || '';
+            document.getElementById('prod-gambar').value = produk.Gambar || '';
+            document.getElementById('prod-desc').value = produk.Deskripsi || '';
+            document.getElementById('edit-produk-index').value = index;
+            document.getElementById('modal-produk-title').textContent = 'Edit Produk';
+            document.getElementById('modal-produk-btn').textContent = 'Update';
+            document.getElementById('form-produk-modal').classList.remove('hidden');
+        }
+
+        // Hapus produk
+        async function deleteProduk(index) {
+            if(confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                globalData.Produk.splice(index, 1);
+                const isSuccess = await sendApiRequest("update_data", "Produk", globalData.Produk);
+                if(isSuccess) {
+                    document.getElementById('dash-produk').textContent = globalData.Produk.length;
+                    renderTables();
+                }
             }
         }
 
@@ -687,18 +730,6 @@
             }
         }
 
-        // Delete produk
-        async function deleteProduk(index) {
-            if(confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
-                globalData.Produk.splice(index, 1);
-                const isSuccess = await sendApiRequest("update_data", "Produk", globalData.Produk);
-                if(isSuccess) {
-                    document.getElementById('dash-produk').textContent = globalData.Produk.length;
-                    renderTables();
-                }
-            }
-        }
-
         function renderTables() {
             // Render Tabel Produk
             const tbProd = document.getElementById('table-produk');
@@ -706,7 +737,7 @@
                 let phtml = '';
                 globalData.Produk.forEach((p, idx) => {
                     if(!p.Nama) return;
-                    phtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4"><img src="${p.Gambar || 'https://via.placeholder.com/50'}" class="w-10 h-10 rounded-lg object-cover"></td><td class="px-6 py-4 font-semibold text-slate-800">${p.Nama}</td><td class="px-6 py-4">${p.Harga || '-'}</td><td class="px-6 py-4 text-right"><button onclick="deleteProduk(${idx})" class="text-red-500 hover:text-red-700 font-semibold"><i class="fa-solid fa-trash mr-1"></i>Hapus</button></td></tr>`;
+                    phtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4"><img src="${p.Gambar || 'https://via.placeholder.com/50'}" class="w-10 h-10 rounded-lg object-cover"></td><td class="px-6 py-4 font-semibold text-slate-800">${p.Nama}</td><td class="px-6 py-4">${p.Harga || '-'}</td><td class="px-6 py-4 text-right space-x-2"><button onclick="editProduk(${idx})" class="text-blue-500 hover:text-blue-700 font-semibold"><i class="fa-solid fa-pen mr-1"></i>Edit</button> <button onclick="deleteProduk(${idx})" class="text-red-500 hover:text-red-700 font-semibold"><i class="fa-solid fa-trash mr-1"></i>Hapus</button></td></tr>`;
                 });
                 tbProd.innerHTML = phtml;
             } else { tbProd.innerHTML = '<tr><td colspan="4" class="text-center py-6">Belum ada data produk</td></tr>'; }
