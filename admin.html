@@ -50,7 +50,7 @@
             <p class="text-slate-500 mb-6 text-sm">Masukkan password admin untuk masuk ke dashboard pengelola.</p>
             <form id="login-form" class="space-y-4">
                 <div>
-                    <input type="password" id="admin-password" placeholder="Password (ketik bebas & Enter)" class="w-full border border-slate-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all text-center font-medium">
+                    <input type="password" id="admin-password" placeholder="Password (ketik bebas & Enter)" class="w-full border border-slate-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 outline-none transition-all">
                 </div>
                 <button type="submit" class="w-full bg-brand-900 hover:bg-brand-700 text-white font-bold py-3 px-4 rounded-xl transition-colors shadow-lg">
                     Masuk Dashboard
@@ -68,27 +68,27 @@
         </div>
         <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
             <p class="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-2">Sistem</p>
-            <button onclick="switchTab('tab-dashboard')" id="nav-tab-dashboard" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all bg-brand-900 text-white shadow-md text-sm">
+            <button onclick="switchTab('tab-dashboard')" id="nav-tab-dashboard" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-all bg-brand-900 text-white shadow-md">
                 <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
             </button>
-            <button onclick="switchTab('tab-umum')" id="nav-tab-umum" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-umum')" id="nav-tab-umum" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-gear w-5"></i> Pengaturan Profil
             </button>
-            <button onclick="switchTab('tab-psb')" id="nav-tab-psb" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-psb')" id="nav-tab-psb" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-user-plus w-5"></i> Pengaturan PSB
             </button>
 
             <p class="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 mt-6">Manajemen Konten</p>
-            <button onclick="switchTab('tab-program')" id="nav-tab-program" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-program')" id="nav-tab-program" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-book-open-reader w-5"></i> Kelola Program
             </button>
-            <button onclick="switchTab('tab-fasilitas')" id="nav-tab-fasilitas" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-fasilitas')" id="nav-tab-fasilitas" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-building w-5"></i> Kelola Fasilitas
             </button>
-            <button onclick="switchTab('tab-produk')" id="nav-tab-produk" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-produk')" id="nav-tab-produk" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-store w-5"></i> Kelola Produk
             </button>
-            <button onclick="switchTab('tab-berita')" id="nav-tab-berita" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all text-slate-400 text-sm">
+            <button onclick="switchTab('tab-berita')" id="nav-tab-berita" class="cms-nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left hover:bg-slate-800 hover:text-white transition-all">
                 <i class="fa-solid fa-newspaper w-5"></i> Kelola Berita
             </button>
         </nav>
@@ -145,18 +145,18 @@
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
                     <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Identitas & Hero Section</h3>
                     <div class="space-y-4">
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">URL Logo Pesantren</label><input type="text" id="input-logo" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-blue-600"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">URL Logo Pesantren</label><input type="text" id="input-logo" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                         <div><label class="block text-sm font-semibold text-slate-700 mb-1">Nama Pesantren</label><input type="text" id="input-nama" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                         <div><label class="block text-sm font-semibold text-slate-700 mb-1">Teks Slogan (Hero)</label><input type="text" id="input-slogan" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Deskripsi Singkat Hero</label><textarea id="input-desc-hero" rows="2" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm"></textarea></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Deskripsi Singkat Hero</label><textarea id="input-desc-hero" rows="2" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
                     <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Profil Singkat & Statistik</h3>
                     <div class="space-y-4">
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">URL Video Profil Pesantren (YouTube/Vimeo)</label><input type="url" id="input-video" placeholder="https://youtube.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-blue-600"></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Profil Singkat Pesantren (Paragraf Tentang Kami)</label><textarea id="input-profil" rows="4" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm leading-relaxed"></textarea></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">URL Video Profil Pesantren (YouTube/Vimeo)</label><input type="url" id="input-video" placeholder="https://..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Profil Singkat Pesantren (Paragraf Tentang Kami)</label><textarea id="input-profil" rows="4" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                             <div><label class="block text-sm font-semibold text-slate-700 mb-1">Lama Berdiri (Tahun)</label><input type="text" id="input-lama" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                             <div><label class="block text-sm font-semibold text-slate-700 mb-1">Jumlah Santri Aktif</label><input type="text" id="input-santri" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
@@ -169,26 +169,26 @@
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
                     <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Gambar Pendukung Profil</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Foto Profil Kiri</label><input type="url" id="input-foto1" placeholder="https://..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-blue-600 text-sm"></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Foto Profil Kanan</label><input type="url" id="input-foto2" placeholder="https://..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-blue-600 text-sm"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Foto Profil Kiri</label><input type="url" id="input-foto1" placeholder="https://..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Foto Profil Kanan</label><input type="url" id="input-foto2" placeholder="https://..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
                     <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Kontak & Footer Sosial Media</h3>
                     <div class="space-y-4">
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Alamat Lengkap</label><textarea id="input-alamat" rows="2" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm"></textarea></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Peta (Google Maps Embed SRC URL)</label><input type="url" id="input-map" placeholder="https://www.google.com/maps/embed?..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-blue-600 text-sm"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Alamat Lengkap</label><textarea id="input-alamat" rows="2" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Peta (Google Maps Embed SRC URL)</label><input type="url" id="input-map" placeholder="https://www..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Facebook</label><input type="url" id="input-fb" placeholder="https://facebook.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm"></div>
-                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Instagram</label><input type="url" id="input-ig" placeholder="https://instagram.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm"></div>
-                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link YouTube Channel</label><input type="url" id="input-yt" placeholder="https://youtube.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none text-sm"></div>
+                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Facebook</label><input type="url" id="input-fb" placeholder="https://facebook.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link Instagram</label><input type="url" id="input-ig" placeholder="https://instagram.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div><label class="block text-sm font-semibold text-slate-700 mb-1">Link YouTube Channel</label><input type="url" id="input-yt" placeholder="https://youtube.com/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                         </div>
                     </div>
                 </div>
                 <!-- END TAMBAHAN -->
 
-                <div class="flex justify-end"><button onclick="savePengaturan()" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl transition-colors shadow-lg shadow-brand-900/20">Simpan Profil Umum</button></div>
+                <div class="flex justify-end"><button onclick="savePengaturan()" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl transition-colors shadow-lg shadow-brand-900/30">Simpan Pengaturan</button></div>
             </div>
 
             <!-- 3. Tab PSB -->
@@ -196,12 +196,12 @@
                 <h2 class="text-2xl font-bold text-slate-800 mb-6">Pengaturan Pendaftaran (PSB)</h2>
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
                     <div class="space-y-6">
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Status Pendaftaran</label><select id="input-status-psb" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-brand-500 outline-none bg-white text-sm"><option value="Buka">Buka (Tombol pendaftaran aktif di website)</option><option value="Tutup">Tutup (Tombol disembunyikan)</option></select></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Nomor WhatsApp Admin (Awali 62)</label><input type="text" id="input-wa" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-brand-500 outline-none text-sm font-medium"></div>
-                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Link Google Form Pendaftaran</label><input type="url" id="input-gform" class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-brand-500 outline-none text-sm text-blue-600"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Status Pendaftaran</label><select id="input-status-psb" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"><option>Buka</option><option>Tutup</option></select></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Nomor WhatsApp Admin (Awali 62)</label><input type="text" id="input-wa" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                        <div><label class="block text-sm font-semibold text-slate-700 mb-2">Link Google Form Pendaftaran</label><input type="url" id="input-gform" class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                     </div>
                 </div>
-                <div class="flex justify-end"><button onclick="savePengaturan()" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl transition-colors shadow-lg">Simpan Pengaturan PSB</button></div>
+                <div class="flex justify-end"><button onclick="savePengaturan()" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2.5 px-6 rounded-xl transition-colors shadow-lg">Simpan Pengaturan</button></div>
             </div>
 
             <!-- 4. Tab Program -->
@@ -226,7 +226,7 @@
             <div id="tab-produk" class="cms-tab-content hidden animate-[fadeIn_0.3s_ease-out]">
                 <div class="flex justify-between items-center mb-6">
                     <div><h2 class="text-2xl font-bold text-slate-800">Manajemen Produk</h2></div>
-                    <button onclick="document.getElementById('form-produk-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg flex items-center gap-2"><i class="fa-solid fa-plus"></i> Tambah</button>
+                    <button onclick="document.getElementById('form-produk-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Produk</button>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
                     <table class="w-full text-sm text-left text-slate-500">
@@ -242,7 +242,7 @@
             <div id="tab-berita" class="cms-tab-content hidden animate-[fadeIn_0.3s_ease-out]">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold text-slate-800">Manajemen Berita</h2>
-                    <button onclick="document.getElementById('form-berita-modal').classList.remove('hidden')" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg flex items-center gap-2"><i class="fa-solid fa-pen-nib"></i> Tulis Artikel</button>
+                    <button onclick="document.getElementById('form-berita-modal').classList.remove('hidden'); resetBeritaForm();" class="bg-brand-900 hover:bg-brand-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg"><i class="fa-solid fa-plus mr-2"></i> Tambah Berita</button>
                 </div>
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
                     <table class="w-full text-sm text-left text-slate-500">
@@ -281,12 +281,12 @@
         <div id="form-berita-modal" class="hidden absolute inset-0 z-[120] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
             <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col animate-[fadeInUp_0.3s_ease-out]">
                 <div class="p-6 border-b flex justify-between items-center bg-slate-50 rounded-t-3xl">
-                    <h3 class="text-xl font-bold text-slate-800"><i class="fa-solid fa-pen-nib text-brand-600 mr-2"></i> Tulis Berita Baru</h3>
+                    <h3 class="text-xl font-bold text-slate-800"><i class="fa-solid fa-pen-nib text-brand-600 mr-2"></i> <span id="modal-berita-title">Tulis Berita Baru</span></h3>
                 </div>
                 <div class="p-6 overflow-y-auto space-y-4 flex-1">
                     <div><label class="block text-sm font-semibold mb-1">Judul Berita</label><input type="text" id="news-judul" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                     <div class="grid grid-cols-2 gap-4">
-                        <div><label class="block text-sm font-semibold mb-1">Kategori</label><select id="news-kategori" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none bg-white"><option>Akademik</option><option>Kegiatan</option><option>Prestasi</option></select></div>
+                        <div><label class="block text-sm font-semibold mb-1">Kategori</label><select id="news-kategori" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"><option>Pengumuman</option><option>Event</option><option>Prestasi</option><option>Lainnya</option></select></div>
                         <div><label class="block text-sm font-semibold mb-1">Tanggal</label><input type="date" id="news-tgl" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
                     </div>
                     <div><label class="block text-sm font-semibold mb-1">URL Gambar Header</label><input type="url" id="news-gambar" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
@@ -301,10 +301,12 @@
                             <div id="news-konten" contenteditable="true" class="p-4 min-h-[200px] outline-none text-sm text-slate-700 bg-white"></div>
                         </div>
                     </div>
+                    <!-- Hidden field untuk menyimpan ID berita yang di-edit -->
+                    <input type="hidden" id="edit-berita-index" value="">
                 </div>
                 <div class="p-6 border-t flex justify-end gap-3 bg-slate-50 rounded-b-3xl">
                     <button onclick="document.getElementById('form-berita-modal').classList.add('hidden')" class="px-6 py-2.5 border rounded-xl text-slate-600 font-bold hover:bg-white">Batal</button>
-                    <button onclick="addBerita()" class="px-6 py-2.5 bg-brand-900 text-white font-bold rounded-xl hover:bg-brand-700 shadow-lg"><i class="fa-solid fa-paper-plane mr-2"></i> Publikasikan</button>
+                    <button onclick="saveBerita()" class="px-6 py-2.5 bg-brand-900 text-white font-bold rounded-xl hover:bg-brand-700 shadow-lg"><i class="fa-solid fa-paper-plane mr-2"></i> <span id="modal-berita-btn">Publikasikan</span></button>
                 </div>
             </div>
         </div>
@@ -322,7 +324,7 @@
         // --- SISTEM TOAST / NOTIFIKASI ---
         function showToast(msg, type='success') {
             const toast = document.createElement('div');
-            toast.className = `fixed bottom-5 right-5 px-6 py-4 rounded-xl text-white font-medium shadow-2xl transition-all transform translate-y-20 z-[200] flex items-center gap-3 ${type==='success' ? 'bg-brand-700' : type==='loading' ? 'bg-blue-600' : 'bg-red-500'}`;
+            toast.className = `fixed bottom-5 right-5 px-6 py-4 rounded-xl text-white font-medium shadow-2xl transition-all transform translate-y-20 z-[200] flex items-center gap-3 ${type==='success' ? 'bg-green-500' : type==='loading' ? 'bg-brand-900' : 'bg-red-500'}`;
             toast.innerHTML = `<i class="fa-solid ${type==='success' ? 'fa-check-circle' : type==='loading' ? 'fa-circle-notch fa-spin' : 'fa-triangle-exclamation'} text-xl"></i> <span>${msg}</span>`;
             document.body.appendChild(toast);
             
@@ -343,12 +345,12 @@
             let progHtml = '';
             for(let i=1; i<=5; i++) {
                 progHtml += `<details class="bg-white border rounded-xl" ${i===1?'open':''}>
-                    <summary class="font-bold p-5 cursor-pointer outline-none flex justify-between items-center text-slate-700 hover:bg-slate-50"><div class="flex items-center gap-3"><span class="bg-brand-100 text-brand-700 w-6 h-6 rounded-full flex items-center justify-center text-xs">${i}</span> Slot Program ${i}</div><i class="fa-solid fa-chevron-down"></i></summary>
+                    <summary class="font-bold p-5 cursor-pointer outline-none flex justify-between items-center text-slate-700 hover:bg-slate-50"><div class="flex items-center gap-3"><span class="bg-brand-100 text-brand-900 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">${i}</span> <span id="prog-judul-${i}-text">Program ${i}</span></span></div><i class="fa-solid fa-chevron-down text-slate-400"></i></summary>
                     <div class="p-5 border-t space-y-4 bg-slate-50/50">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Judul Program</label><input type="text" id="prog-judul-${i}" class="w-full border rounded-lg px-3 py-2 outline-none"></div>
-                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Ikon (FontAwesome)</label><input type="text" id="prog-ikon-${i}" placeholder="fa-solid fa-book" class="w-full border rounded-lg px-3 py-2 outline-none font-mono text-slate-500"></div>
-                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">Deskripsi Singkat</label><textarea id="prog-desc-${i}" rows="2" class="w-full border rounded-lg px-3 py-2 outline-none"></textarea></div>
+                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Judul Program</label><input type="text" id="prog-judul-${i}" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Ikon (FontAwesome)</label><input type="text" id="prog-ikon-${i}" placeholder="fa-solid fa-book" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">Deskripsi Singkat</label><textarea id="prog-desc-${i}" rows="2" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
                         </div>
                     </div></details>`;
             }
@@ -357,13 +359,13 @@
             let fasHtml = '';
             for(let i=1; i<=6; i++) {
                 fasHtml += `<details class="bg-white border rounded-xl" ${i===1?'open':''}>
-                    <summary class="font-bold p-5 cursor-pointer outline-none flex justify-between items-center text-slate-700 hover:bg-slate-50"><div class="flex items-center gap-3"><span class="bg-gold-100 text-gold-600 w-6 h-6 rounded-full flex items-center justify-center text-xs">${i}</span> Slot Fasilitas ${i}</div><i class="fa-solid fa-chevron-down"></i></summary>
+                    <summary class="font-bold p-5 cursor-pointer outline-none flex justify-between items-center text-slate-700 hover:bg-slate-50"><div class="flex items-center gap-3"><span class="bg-brand-100 text-brand-900 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">${i}</span> <span id="fas-nama-${i}-text">Fasilitas ${i}</span></span></div><i class="fa-solid fa-chevron-down text-slate-400"></i></summary>
                     <div class="p-5 border-t space-y-4 bg-slate-50/50">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">URL Gambar</label><input type="url" id="fas-gambar-${i}" class="w-full border rounded-lg px-3 py-2 outline-none text-blue-600"></div>
-                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Nama Fasilitas</label><input type="text" id="fas-nama-${i}" class="w-full border rounded-lg px-3 py-2 outline-none"></div>
-                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Kategori</label><input type="text" id="fas-kat-${i}" class="w-full border rounded-lg px-3 py-2 outline-none"></div>
-                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">Deskripsi</label><textarea id="fas-desc-${i}" rows="2" class="w-full border rounded-lg px-3 py-2 outline-none"></textarea></div>
+                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">URL Gambar</label><input type="url" id="fas-gambar-${i}" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Nama Fasilitas</label><input type="text" id="fas-nama-${i}" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div><label class="block text-xs font-semibold text-slate-600 mb-1">Kategori</label><input type="text" id="fas-kat-${i}" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></div>
+                            <div class="md:col-span-2"><label class="block text-xs font-semibold text-slate-600 mb-1">Deskripsi</label><textarea id="fas-desc-${i}" rows="2" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-brand-500 outline-none"></textarea></div>
                         </div>
                     </div></details>`;
             }
@@ -594,11 +596,30 @@
                 document.getElementById('form-produk-modal').classList.add('hidden');
                 document.getElementById('dash-produk').textContent = globalData.Produk.length;
                 renderTables(); // Update UI tabel
+                // Clear form
+                document.getElementById('prod-nama').value = '';
+                document.getElementById('prod-harga').value = '';
+                document.getElementById('prod-label').value = '';
+                document.getElementById('prod-gambar').value = '';
+                document.getElementById('prod-desc').value = '';
             }
         }
 
-        // Tambah Berita
-        async function addBerita() {
+        // Reset form berita
+        function resetBeritaForm() {
+            document.getElementById('news-judul').value = '';
+            document.getElementById('news-kategori').value = 'Pengumuman';
+            document.getElementById('news-tgl').value = '';
+            document.getElementById('news-gambar').value = '';
+            document.getElementById('news-konten').innerHTML = '';
+            document.getElementById('edit-berita-index').value = '';
+            document.getElementById('modal-berita-title').textContent = 'Tulis Berita Baru';
+            document.getElementById('modal-berita-btn').textContent = 'Publikasikan';
+        }
+
+        // Tambah / Edit Berita
+        async function saveBerita() {
+            const editIndex = document.getElementById('edit-berita-index').value;
             const payload = {
                 tanggal: document.getElementById('news-tgl').value,
                 kategori: document.getElementById('news-kategori').value,
@@ -609,14 +630,72 @@
 
             if(!payload.judul) return showToast("Judul wajib diisi!", "error");
 
-            const isSuccess = await sendApiRequest("add_berita", "Berita", payload);
-            if(isSuccess) {
-                document.getElementById('form-berita-modal').classList.add('hidden');
-                // Masukkan langsung ke tabel lokal (bawah)
-                if(!globalData.Berita) globalData.Berita = [];
-                globalData.Berita.push({Tanggal: payload.tanggal, Judul: payload.judul, Kategori: payload.kategori});
-                document.getElementById('dash-berita').textContent = `${globalData.Berita.length} Artikel`;
-                renderTables();
+            if(editIndex === '') {
+                // Tambah berita baru
+                const isSuccess = await sendApiRequest("add_berita", "Berita", payload);
+                if(isSuccess) {
+                    document.getElementById('form-berita-modal').classList.add('hidden');
+                    if(!globalData.Berita) globalData.Berita = [];
+                    globalData.Berita.push({Tanggal: payload.tanggal, Judul: payload.judul, Kategori: payload.kategori});
+                    document.getElementById('dash-berita').textContent = `${globalData.Berita.length} Artikel`;
+                    renderTables();
+                    resetBeritaForm();
+                }
+            } else {
+                // Edit berita
+                const idx = parseInt(editIndex);
+                globalData.Berita[idx] = {
+                    Tanggal: payload.tanggal,
+                    Judul: payload.judul,
+                    Kategori: payload.kategori,
+                    Gambar: payload.gambar,
+                    Konten: payload.konten
+                };
+
+                const isSuccess = await sendApiRequest("update_data", "Berita", globalData.Berita);
+                if(isSuccess) {
+                    document.getElementById('form-berita-modal').classList.add('hidden');
+                    renderTables();
+                    resetBeritaForm();
+                }
+            }
+        }
+
+        // Edit berita
+        function editBerita(index) {
+            const berita = globalData.Berita[index];
+            document.getElementById('news-judul').value = berita.Judul || '';
+            document.getElementById('news-kategori').value = berita.Kategori || 'Pengumuman';
+            document.getElementById('news-tgl').value = berita.Tanggal || '';
+            document.getElementById('news-gambar').value = berita.Gambar || '';
+            document.getElementById('news-konten').innerHTML = berita.Konten || '';
+            document.getElementById('edit-berita-index').value = index;
+            document.getElementById('modal-berita-title').textContent = 'Edit Berita';
+            document.getElementById('modal-berita-btn').textContent = 'Update';
+            document.getElementById('form-berita-modal').classList.remove('hidden');
+        }
+
+        // Hapus berita
+        async function deleteBerita(index) {
+            if(confirm('Apakah Anda yakin ingin menghapus berita ini?')) {
+                globalData.Berita.splice(index, 1);
+                const isSuccess = await sendApiRequest("update_data", "Berita", globalData.Berita);
+                if(isSuccess) {
+                    document.getElementById('dash-berita').textContent = `${globalData.Berita.length} Artikel`;
+                    renderTables();
+                }
+            }
+        }
+
+        // Delete produk
+        async function deleteProduk(index) {
+            if(confirm('Apakah Anda yakin ingin menghapus produk ini?')) {
+                globalData.Produk.splice(index, 1);
+                const isSuccess = await sendApiRequest("update_data", "Produk", globalData.Produk);
+                if(isSuccess) {
+                    document.getElementById('dash-produk').textContent = globalData.Produk.length;
+                    renderTables();
+                }
             }
         }
 
@@ -625,9 +704,9 @@
             const tbProd = document.getElementById('table-produk');
             if(globalData.Produk && globalData.Produk.length > 0) {
                 let phtml = '';
-                globalData.Produk.forEach(p => {
+                globalData.Produk.forEach((p, idx) => {
                     if(!p.Nama) return;
-                    phtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4"><img src="${p.Gambar || 'https://via.placeholder.com/50'}" class="w-10 h-10 rounded-lg object-cover"></td><td class="px-6 py-4 font-semibold text-slate-800">${p.Nama}</td><td class="px-6 py-4 font-medium text-brand-700">${p.Harga || '-'}</td><td class="px-6 py-4 text-right"><span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Aktif</span></td></tr>`;
+                    phtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4"><img src="${p.Gambar || 'https://via.placeholder.com/50'}" class="w-10 h-10 rounded-lg object-cover"></td><td class="px-6 py-4 font-semibold text-slate-800">${p.Nama}</td><td class="px-6 py-4">${p.Harga || '-'}</td><td class="px-6 py-4 text-right"><button onclick="deleteProduk(${idx})" class="text-red-500 hover:text-red-700 font-semibold"><i class="fa-solid fa-trash mr-1"></i>Hapus</button></td></tr>`;
                 });
                 tbProd.innerHTML = phtml;
             } else { tbProd.innerHTML = '<tr><td colspan="4" class="text-center py-6">Belum ada data produk</td></tr>'; }
@@ -637,9 +716,10 @@
             if(globalData.Berita && globalData.Berita.length > 0) {
                 let bhtml = '';
                 // Balik array agar yang paling baru (bawah sheet) ada di atas
-                [...globalData.Berita].reverse().forEach(b => {
+                [...globalData.Berita].reverse().forEach((b, reverseIdx) => {
                     if(!b.Judul) return;
-                    bhtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4">${b.Tanggal || '-'}</td><td class="px-6 py-4 font-semibold text-slate-800">${b.Judul}</td><td class="px-6 py-4"><span class="bg-blue-50 text-blue-700 border border-blue-200 text-xs font-semibold px-2 py-0.5 rounded-full">${b.Kategori || '-'}</span></td><td class="px-6 py-4 text-right text-green-600 font-bold"><i class="fa-solid fa-check"></i></td></tr>`;
+                    const actualIdx = globalData.Berita.length - 1 - reverseIdx;
+                    bhtml += `<tr class="bg-white border-b hover:bg-slate-50"><td class="px-6 py-4">${b.Tanggal || '-'}</td><td class="px-6 py-4 font-semibold text-slate-800">${b.Judul}</td><td class="px-6 py-4">${b.Kategori || '-'}</td><td class="px-6 py-4 text-right space-x-2"><button onclick="editBerita(${actualIdx})" class="text-blue-500 hover:text-blue-700 font-semibold"><i class="fa-solid fa-pen mr-1"></i>Edit</button> <button onclick="deleteBerita(${actualIdx})" class="text-red-500 hover:text-red-700 font-semibold"><i class="fa-solid fa-trash mr-1"></i>Hapus</button></td></tr>`;
                 });
                 tbBerita.innerHTML = bhtml;
             } else { tbBerita.innerHTML = '<tr><td colspan="4" class="text-center py-6">Belum ada berita dipublikasikan</td></tr>'; }
